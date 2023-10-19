@@ -1,1 +1,35 @@
 <script src="https://zitate.webmart.de/zdt.js" async></script>
+
+<div id="myZitate"></div>
+
+<script>
+
+function getZitate() {
+
+            debugger;
+
+    var wm = $('[id^=WMZitate]');
+
+    if (!wm.length) {
+
+        return setTimeout(function () {
+
+            getZitate();
+
+        }, 100);
+
+    } else {
+
+            debugger;
+
+        $("#myZitate").html("");
+
+        $("#myZitate").append(wm.clone());
+
+    }
+
+}
+
+getZitate()
+
+</script>
